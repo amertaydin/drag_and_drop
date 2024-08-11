@@ -4,9 +4,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
-import { Autobind } from "../decorators/autobind.js";
+import { Autobind as autobind } from "../decorators/autobind.js";
 import { projectState } from "../state/project-state.js";
-import { validate } from "../util/validation.js";
+import * as Validation from "../util/validation.js";
 import { Component } from "./base-component.js";
 export class ProjectInput extends Component {
     constructor() {
@@ -35,9 +35,9 @@ export class ProjectInput extends Component {
             min: 1,
             max: 5,
         };
-        if (!validate(titleValidatable) ||
-            !validate(descriptionValidatable) ||
-            !validate(peopleValidatable)) {
+        if (!Validation.validate(titleValidatable) ||
+            !Validation.validate(descriptionValidatable) ||
+            !Validation.validate(peopleValidatable)) {
             alert("Invalid input, Please try again!");
             return;
         }
@@ -65,6 +65,6 @@ export class ProjectInput extends Component {
     }
 }
 __decorate([
-    Autobind
+    autobind
 ], ProjectInput.prototype, "submitHandler", null);
 //# sourceMappingURL=project-input.js.map
