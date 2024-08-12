@@ -1,7 +1,7 @@
-import { Autobind as autobind } from "../decorators/autobind.js"; // use alias
-import { projectState } from "../state/project-state.js";
-import * as Validation from "../util/validation.js"; // grouping
-import { Component } from "./base-component.js";
+import { Autobind as autobind } from "../decorators/autobind"; // use alias
+import { projectState } from "../state/project-state";
+import * as Validation from "../util/validation"; // grouping
+import { Component } from "./base-component";
 
 // ProjectInput Class
 export class ProjectInput extends Component<HTMLDivElement, HTMLFormElement> {
