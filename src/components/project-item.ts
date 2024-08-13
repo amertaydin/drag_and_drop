@@ -11,7 +11,7 @@ export class ProjectItem
   private project: Project;
 
   get persons() {
-    if (this.project.people) {
+    if (this.project.people === 1) {
       return "1 person";
     } else {
       return `${this.project.people} persons`;
